@@ -175,4 +175,79 @@ console.log(message1.includes("Welcom")); //true
 const bigNum = 9007199254740991n;
 console.log(typeof bigNum)
 
-//
+//Объекти
+
+let user = {
+    name: "Ivan",
+    age: 30,
+    work: true,
+};
+
+console.log(user); //весь объект
+console.log(user.name); //тільки name
+console.log(user.age); //тільки age
+
+//delete - виделяе
+
+let user1 = {
+    name: "Ivan",
+    age: 30,
+    "like birds": true,
+};
+
+//якщо ключ с де кілька слів то обов'язково лапки "like birds"
+//при цьому для виклику через user1["like birds"]
+
+console.log(user1["like birds"])
+
+delete user1.age;
+
+console.log(user1);
+console.log(user1.age);
+
+let user2 = {};
+user2.name = "Niko"
+console.log(user2);
+user2.age = 45;
+console.log(user2);
+
+//Цикл "for...in"
+
+// for (key in object) {
+
+// }
+
+let user3 = {
+    name: "Ivan",
+    age: 30,
+    isAdmin: true,
+};
+
+for (let key in user3) {
+    //ключі
+    console.log(key); //name, age, isAdmin
+    //значення
+    console.log(user3[key]); //Ivan, 30, true
+};
+
+//Впорядкування властивостей об'єкта
+let codes = {
+    49: "Німеччина",
+    41: "Швейцарія",
+    44: "Великобританія",
+    1: "США",
+}
+
+for (let code in codes) {
+    console.log(code);
+}
+
+let user4 = {
+    name: "Ivan",
+    surname: "Smith",
+    age: 40,
+}
+
+for (let prop in user4) { 
+    console.log(prop);
+};
