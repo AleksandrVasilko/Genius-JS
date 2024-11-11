@@ -115,6 +115,11 @@ for (let key in arr1) {
   console.log(arr1[key]);
 }
 
+//forEach
+
+const arr12 = ["a", "b", "c"];
+arr12.forEach((element) => console.log(element));
+
 let matrix = [
   [1, 2, 3],
   [4, 5, 6],
