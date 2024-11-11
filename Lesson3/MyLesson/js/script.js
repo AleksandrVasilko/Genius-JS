@@ -108,3 +108,114 @@ for (let i = 0; i < arr1.length; i++) {
 for (let item of arr1) {
   console.log(item);
 }
+
+//з доступом по індексу
+
+for (let key in arr1) { 
+  console.log(arr1[key]);
+}
+
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix);
+console.log(matrix[1][1]);
+
+// мєтоди присвоєння
+// примітивні типи копіюются за значенням
+
+let a1 = 5
+let b1 = a;
+
+a1 = 10;
+
+console.log(a1);
+console.log(b1);
+
+//складні (масиви та обєкти) копіюются за посиланням
+
+let arr11 = [1, 2, 3];
+let arr22 = arr11;
+
+arr11.push(a);
+
+console.log(arr11);
+console.log(arr22);
+
+//ще методи масиву
+
+//splice
+
+let arrstr = ["a", "b", "c", "d", "f"];
+
+arrstr.splice(2, 1);
+
+console.log(arrstr);
+
+//slice
+
+let arrstr1 = ["a", "b", "c", "d", "f"];
+
+console.log(arrstr1.slice(1, 3))
+
+//concat
+
+let arra = [1, 2, 3];
+let arrb = [4, 5, 6];
+
+console.log(arra + arrb); // не працює
+
+console.log(arra.concat(arrb));
+
+// indexOf, lastIndexOf, includes
+
+console.log(arrstr1.indexOf("c", 1)); // 2 аргумент не обов'язковий
+console.log(arrstr1.lastIndexOf("c")); // шукає з кінця, 2 аргумент не обов'язковий
+console.log(arrstr1.includes("c"));
+
+//find
+
+const fruits = [
+  { id: 0, name: "Apple" },
+  { id: 1, name: "Tomat" },
+  { id: 2, name: "Cherry" },
+  { id: 3, name: "Orange" },
+];
+
+console.log(fruits.find((item) => item.id === 1));
+
+// filter
+
+console.log(fruits.filter((item) => item.id < 2));
+
+//map
+
+let result = fruits.map((item) => item.name.length);
+console.log(result);
+
+//split - перетворює строку в масив
+
+let names = "Оля, Юля, Аня, Петя"
+let arrName = names.split(", ");
+console.log(arrName);
+
+//joun - перетворює масив в строку
+
+let newString = arrName.join(", ");
+console.log(newString);
+
+//reduce
+
+let arrRed = [1, 2, 3, 4, 5];
+let red = arrRed.reduce((summ, item) => summ + item);
+
+console.log(red);
+
+let arrRed1 = [23, 45, 30];
+
+let summ1 = arrRed1.reduce((sum, item) => sum + item) / arrRed1.length;
+
+console.log(summ1);
