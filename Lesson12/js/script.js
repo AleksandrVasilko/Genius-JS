@@ -37,3 +37,22 @@ stopButton.addEventListener("click", () => {
     clearInterval(time);
     console.log("stop");
 })
+
+const a = {
+    classic() {
+        setTimeout(function () {
+            console.log(`${this}, classic in obj`);
+        });
+    },
+    arr() {
+        setTimeout(() => {
+            console.log(`${this}, arr in obj`);
+        });
+    },
+};
+
+a.classic();
+a.arr();
+
+const data = new Date();
+console.log(data);
